@@ -20,4 +20,12 @@ vim.diagnostic.config({
 })
 
 vim.keymap.set("n", "ds", vim.diagnostic.open_float, { desc = "Show Diagnostic"})
+vim.keymap.set("n", "e", "<CR>", {desc = "Enter key"})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "netrw",
+	callback = function()
+		vim.keymap.set("n","<leader>E", "<CR>", { buffer = true, desc = "Enter Directory" })
+	end,
+})
 

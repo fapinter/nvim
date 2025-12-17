@@ -19,6 +19,11 @@ return {
           },
         },
       },
+			pickers = {
+				find_files = {
+					disable_devicons = false,
+				},
+			},
     })
 
     -- Mapeamentos de teclado para comandos do Telescope
